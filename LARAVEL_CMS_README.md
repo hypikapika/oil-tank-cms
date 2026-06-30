@@ -1,6 +1,6 @@
-# Laravel 11 Oil Tank Landing Page + CMS
+# Catatan Integrasi Laravel
 
-Scaffold ini menambahkan autentikasi custom ringan, role admin/user, landing page dinamis, CMS produk tangki, pengelolaan pesan masuk, dan upload gambar melalui disk `public`.
+File di repository ini disiapkan untuk ditempatkan di root project Laravel 11. Isinya mencakup auth sederhana, role admin/user, halaman depan perusahaan tangki minyak, pengelolaan produk, pengelolaan teks halaman, dan pesan dari form kontak.
 
 ## File Utama
 
@@ -18,7 +18,7 @@ Scaffold ini menambahkan autentikasi custom ringan, role admin/user, landing pag
 - `routes/web.php`
 - `resources/views/*`
 
-## Menjalankan di Laravel 11
+## Menjalankan
 
 1. Pastikan file ini berada di root project Laravel 11.
 2. Atur koneksi database di `.env`.
@@ -47,7 +47,7 @@ ADMIN_PASSWORD=
 
 Jangan commit file `.env`. Gunakan password kuat dan unik sebelum menjalankan `php artisan migrate --seed`.
 
-## Middleware Admin di Laravel 11
+## Middleware Admin
 
 Alias `admin` sudah didaftarkan di `bootstrap/app.php`:
 
@@ -57,20 +57,20 @@ $middleware->alias([
 ]);
 ```
 
-Route CMS memakai middleware:
+Route admin memakai middleware:
 
 ```php
 Route::prefix('admin')
     ->as('admin.')
     ->middleware(['auth', 'admin'])
     ->group(function () {
-        // CMS routes
+        // route admin
     });
 ```
 
-## Jika Ingin Menggunakan Laravel Breeze
+## Jika Memakai Laravel Breeze
 
-Auth custom di folder `app/Http/Controllers/Auth` dan `resources/views/auth` bisa diganti Breeze:
+Bagian auth custom di `app/Http/Controllers/Auth` dan `resources/views/auth` bisa diganti dengan Breeze:
 
 ```bash
 composer require laravel/breeze --dev
@@ -82,9 +82,9 @@ Tetap pertahankan:
 
 - kolom `role` pada tabel `users`
 - `AdminMiddleware`
-- route group CMS dengan `middleware(['auth', 'admin'])`
+- route admin dengan `middleware(['auth', 'admin'])`
 - controller dan view admin
 
 ## Upload Gambar
 
-Produk dan background hero disimpan ke disk `public`, sehingga `php artisan storage:link` wajib dijalankan agar file bisa diakses dari browser.
+Produk dan background hero disimpan ke disk `public`. Jalankan `php artisan storage:link` agar file bisa diakses dari browser.

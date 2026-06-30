@@ -11,10 +11,10 @@ class LandingContent extends Model
     use HasFactory;
 
     public const DEFAULTS = [
-        'hero_title' => 'Industrial Oil Tank Fabrication & Rental',
-        'hero_subtitle' => 'Solusi tangki minyak yang aman, tahan lama, dan siap mendukung kebutuhan penyimpanan industri Anda.',
-        'about_title' => 'Mitra Tangki Minyak untuk Operasi Industri',
-        'about_body' => 'Kami menyediakan layanan fabrikasi, penyewaan, inspeksi, dan perawatan tangki minyak dengan standar keselamatan kerja dan mutu produksi yang terukur.',
+        'hero_title' => 'Tangki Minyak untuk Kebutuhan Industri',
+        'hero_subtitle' => 'Fabrikasi, sewa, dan perawatan tangki minyak untuk penyimpanan bahan bakar, pelumas, dan kebutuhan site project.',
+        'about_title' => 'Mendukung Penyimpanan Minyak yang Lebih Tertata',
+        'about_body' => 'Kami menangani pembuatan, penyewaan, inspeksi, dan perawatan tangki minyak dengan memperhatikan kekuatan material, akses perawatan, serta kebutuhan operasional di lapangan.',
         'contact_email' => 'sales@oiltank.test',
         'contact_phone' => '+62 812 0000 0000',
         'hero_background_path' => null,

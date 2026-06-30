@@ -11,7 +11,7 @@ class AdminUserSeeder extends Seeder
     public function run(): void
     {
         if (! env('ADMIN_EMAIL') || ! env('ADMIN_PASSWORD')) {
-            $this->command?->warn('Admin user was not created. Set ADMIN_EMAIL and ADMIN_PASSWORD in your local .env first.');
+            $this->command?->warn('Akun admin belum dibuat. Isi ADMIN_EMAIL dan ADMIN_PASSWORD di .env lokal terlebih dahulu.');
 
             return;
         }

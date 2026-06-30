@@ -1,13 +1,13 @@
 @extends('layouts.public')
 
-@section('title', 'Register - OilTankPro')
+@section('title', 'Daftar - OilTankPro')
 
 @section('content')
     <main class="auth-page">
         <div class="container">
             <div class="auth-card mx-auto">
-                <h1 class="h3 mb-2">Register</h1>
-                <p class="text-muted">Akun publik dibuat dengan role user. Role admin hanya dibuat dari seeder atau oleh pemilik sistem.</p>
+                <h1 class="h3 mb-2">Daftar</h1>
+                <p class="text-muted">Akun baru akan tercatat sebagai user. Akses admin hanya diberikan oleh pemilik sistem.</p>
 
                 <form method="POST" action="{{ route('register') }}" class="mt-4">
                     @csrf
@@ -31,7 +31,7 @@
                 </form>
 
                 <p class="mt-4 mb-0 text-center">
-                    Sudah punya akun? <a href="{{ route('login') }}">Login</a>
+                    Sudah punya akun? <a href="{{ route('login') }}">Masuk</a>
                 </p>
             </div>
         </div>

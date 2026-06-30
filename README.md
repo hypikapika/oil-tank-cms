@@ -1,16 +1,15 @@
-# OilTankPro Laravel CMS
+# OilTankPro
 
-Laravel 11 scaffold for an oil tank company landing page with custom login/register, admin/user roles, CMS product management, landing page content management, and contact message inbox.
+Kode ini berisi halaman perusahaan tangki minyak dan panel admin sederhana untuk mengelola produk, isi landing page, dan pesan masuk.
 
-## Security Notes
+## Catatan Penting
 
-- Do not commit `.env`; use `.env.example` as the template.
-- Set `ADMIN_EMAIL` and `ADMIN_PASSWORD` locally before running seeders.
-- The admin seeder will skip admin creation when those variables are empty.
-- Run `php artisan storage:link` so product images can load from the public disk.
-- Use strong passwords and private environment variables in production.
+- Jangan commit `.env`.
+- Isi `ADMIN_EMAIL` dan `ADMIN_PASSWORD` di `.env` lokal sebelum menjalankan seeder.
+- Seeder admin sengaja tidak membuat akun jika email atau password admin belum diisi.
+- Jalankan `php artisan storage:link` agar foto produk bisa tampil.
 
-## Local Setup
+## Menjalankan
 
 ```bash
 cp .env.example .env
@@ -20,10 +19,10 @@ php artisan storage:link
 php artisan serve
 ```
 
-## Main Features
+## Isi Project
 
-- Public oil tank company landing page.
-- Dynamic Hero, About, Product, and Contact sections.
-- Product CRUD with image upload.
-- Contact form with CMS inbox.
-- Admin-only CMS protected by `auth` and `admin` middleware.
+- Landing page perusahaan tangki minyak.
+- Masuk dan daftar akun dengan role `admin` dan `user`.
+- Kelola produk tangki, kapasitas, spesifikasi, dan gambar.
+- Kelola teks halaman depan.
+- Simpan pesan dari form kontak.

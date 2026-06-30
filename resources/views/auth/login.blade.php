@@ -1,13 +1,13 @@
 @extends('layouts.public')
 
-@section('title', 'Login - OilTankPro')
+@section('title', 'Masuk - OilTankPro')
 
 @section('content')
     <main class="auth-page">
         <div class="container">
             <div class="auth-card mx-auto">
-                <h1 class="h3 mb-2">Login</h1>
-                <p class="text-muted">Masuk sebagai admin untuk membuka CMS atau sebagai user untuk akses fitur member.</p>
+                <h1 class="h3 mb-2">Masuk</h1>
+                <p class="text-muted">Masuk untuk mengelola data atau membuka akses akun pengguna.</p>
 
                 <form method="POST" action="{{ route('login') }}" class="mt-4">
                     @csrf
@@ -23,7 +23,7 @@
                         <input type="checkbox" name="remember" id="remember" class="form-check-input">
                         <label class="form-check-label" for="remember">Ingat saya</label>
                     </div>
-                    <button type="submit" class="btn btn-warning w-100">Login</button>
+                    <button type="submit" class="btn btn-warning w-100">Masuk</button>
                 </form>
 
                 <p class="mt-4 mb-0 text-center">

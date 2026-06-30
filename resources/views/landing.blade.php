@@ -1,13 +1,13 @@
 @extends('layouts.public')
 
-@section('title', 'OilTankPro - Industrial Oil Tank')
+@section('title', 'OilTankPro - Tangki Minyak Industri')
 
 @section('content')
     <header class="hero-oil" style="background-image: linear-gradient(90deg, rgba(15, 24, 32, .88), rgba(15, 24, 32, .48)), url('{{ $content['hero_background_url'] }}');">
         <div class="container">
             <div class="row align-items-center min-vh-100 pt-5">
                 <div class="col-lg-8">
-                    <span class="eyebrow">Fabrication | Rental | Maintenance</span>
+                    <span class="eyebrow">Fabrikasi | Sewa | Perawatan</span>
                     <h1 class="display-4 fw-bold mt-3">{{ $content['hero_title'] }}</h1>
                     <p class="lead mt-3 hero-copy">{{ $content['hero_subtitle'] }}</p>
                     <div class="d-flex flex-wrap gap-3 mt-4">
@@ -24,7 +24,7 @@
             <div class="container">
                 <div class="row align-items-center g-4">
                     <div class="col-lg-5">
-                        <span class="eyebrow text-dark">About Us</span>
+                        <span class="eyebrow text-dark">Tentang Kami</span>
                         <h2 class="section-title mt-2">{{ $content['about_title'] }}</h2>
                     </div>
                     <div class="col-lg-7">
@@ -37,9 +37,9 @@
         <section id="products" class="section-space">
             <div class="container">
                 <div class="section-heading text-center">
-                    <span class="eyebrow text-dark">Products & Services</span>
-                    <h2 class="section-title">Solusi Tangki Minyak</h2>
-                    <p>Data produk ini diambil dari CMS admin dan hanya menampilkan item aktif.</p>
+                    <span class="eyebrow text-dark">Produk & Layanan</span>
+                    <h2 class="section-title">Pilihan Tangki Minyak</h2>
+                    <p>Beberapa tipe tangki yang biasa digunakan untuk area industri, site project, dan fasilitas penyimpanan.</p>
                 </div>
 
                 <div class="row g-4 mt-2">
@@ -58,7 +58,7 @@
                     @empty
                         <div class="col-12">
                             <div class="empty-state">
-                                Belum ada produk aktif. Admin dapat menambahkan produk melalui CMS.
+                                Belum ada produk yang ditampilkan.
                             </div>
                         </div>
                     @endforelse
@@ -70,7 +70,7 @@
             <div class="container">
                 <div class="row g-4 align-items-start">
                     <div class="col-lg-5 text-white">
-                        <span class="eyebrow">Contact</span>
+                        <span class="eyebrow">Kontak</span>
                         <h2 class="section-title text-white mt-2">Konsultasikan Kebutuhan Tangki Anda</h2>
                         <p class="hero-copy">Kirim kebutuhan kapasitas, lokasi project, dan spesifikasi awal. Tim kami akan membantu menyiapkan estimasi.</p>
                         <p class="mb-1">Email: {{ $content['contact_email'] }}</p>
