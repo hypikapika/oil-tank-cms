@@ -1,0 +1,266 @@
+:root {
+    --ink: #111820;
+    --panel: #1f2a33;
+    --steel: #5d6d7a;
+    --line: #dbe3ea;
+    --soft: #f3f6f8;
+    --amber: #f4b63f;
+    --green: #2f7d63;
+}
+
+body {
+    color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+}
+
+a {
+    color: var(--green);
+}
+
+.public-navbar {
+    background: rgba(17, 24, 32, .92);
+    backdrop-filter: blur(12px);
+}
+
+.navbar-brand span,
+.admin-brand span {
+    color: var(--amber);
+}
+
+.flash-stack {
+    margin-top: 86px;
+}
+
+.hero-oil {
+    min-height: 92vh;
+    color: #fff;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-copy {
+    max-width: 720px;
+    color: rgba(255, 255, 255, .84);
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--amber);
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.section-space {
+    padding: 88px 0;
+}
+
+.bg-soft {
+    background: var(--soft);
+}
+
+.bg-dark-panel {
+    background: var(--panel);
+}
+
+.section-heading {
+    max-width: 720px;
+    margin: 0 auto 24px;
+}
+
+.section-title {
+    font-weight: 800;
+}
+
+.section-copy {
+    color: #45545f;
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.product-card,
+.auth-card,
+.admin-panel,
+.stat-card,
+.contact-panel {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 16px 34px rgba(31, 42, 51, .08);
+}
+
+.product-card {
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    background: var(--soft);
+}
+
+.product-capacity {
+    display: inline-block;
+    color: var(--green);
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.spec-list {
+    margin: 0;
+    color: #45545f;
+    white-space: pre-wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .94rem;
+    line-height: 1.6;
+}
+
+.contact-panel {
+    padding: 28px;
+}
+
+.empty-state {
+    padding: 28px;
+    text-align: center;
+    color: #66737e;
+    border: 1px dashed var(--line);
+    border-radius: 8px;
+}
+
+.site-footer {
+    color: #d6dde3;
+    background: var(--ink);
+}
+
+.auth-page {
+    min-height: 100vh;
+    padding: 140px 0 80px;
+    background: var(--soft);
+}
+
+.auth-card {
+    max-width: 480px;
+    padding: 32px;
+}
+
+.admin-body {
+    background: var(--soft);
+}
+
+.admin-shell {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 280px 1fr;
+}
+
+.admin-sidebar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    gap: 24px;
+    padding: 28px;
+    color: #fff;
+    background: var(--ink);
+}
+
+.admin-brand {
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.admin-sidebar .nav-link {
+    color: rgba(255, 255, 255, .78);
+    border-radius: 6px;
+}
+
+.admin-sidebar .nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, .08);
+}
+
+.admin-main {
+    padding: 32px;
+}
+
+.admin-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.admin-panel,
+.stat-card {
+    padding: 24px;
+}
+
+.stat-card span {
+    color: #66737e;
+    font-size: .9rem;
+}
+
+.stat-card strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 2rem;
+}
+
+.preview-image {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: var(--soft);
+}
+
+.table-thumb {
+    width: 72px;
+    height: 54px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+}
+
+.message-box {
+    padding: 18px;
+    white-space: pre-wrap;
+    background: var(--soft);
+    border-radius: 8px;
+}
+
+@media (max-width: 991.98px) {
+    .admin-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-sidebar {
+        position: static;
+        height: auto;
+    }
+
+    .admin-main {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .section-space {
+        padding: 64px 0;
+    }
+
+    .auth-card,
+    .contact-panel,
+    .admin-panel,
+    .stat-card {
+        padding: 20px;
+    }
+}

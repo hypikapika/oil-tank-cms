@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Industrial oil tank illustration">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dce6ec"/>
+      <stop offset="1" stop-color="#8da1af"/>
+    </linearGradient>
+    <linearGradient id="tank" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9baab4"/>
+      <stop offset=".48" stop-color="#e7edf0"/>
+      <stop offset="1" stop-color="#657783"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect y="610" width="1600" height="290" fill="#2a353c"/>
+  <rect x="0" y="655" width="1600" height="56" fill="#46545d"/>
+  <g opacity=".45">
+    <rect x="96" y="180" width="88" height="430" fill="#566773"/>
+    <rect x="128" y="120" width="24" height="490" fill="#3d4b55"/>
+    <rect x="1016" y="144" width="86" height="466" fill="#566773"/>
+    <rect x="1048" y="94" width="24" height="516" fill="#3d4b55"/>
+  </g>
+  <g transform="translate(232 212)">
+    <ellipse cx="300" cy="72" rx="300" ry="72" fill="#f4f7f8"/>
+    <rect x="0" y="72" width="600" height="372" fill="url(#tank)"/>
+    <ellipse cx="300" cy="444" rx="300" ry="72" fill="#6b7e89"/>
+    <ellipse cx="300" cy="72" rx="300" ry="72" fill="none" stroke="#5c6e79" stroke-width="10"/>
+    <line x1="42" y1="178" x2="558" y2="178" stroke="#728590" stroke-width="8" opacity=".62"/>
+    <line x1="42" y1="290" x2="558" y2="290" stroke="#728590" stroke-width="8" opacity=".62"/>
+    <rect x="252" y="-2" width="96" height="38" rx="8" fill="#53636d"/>
+    <rect x="578" y="112" width="28" height="322" fill="#3d4b55"/>
+    <line x1="592" y1="132" x2="592" y2="426" stroke="#dce6ec" stroke-width="5"/>
+    <line x1="578" y1="180" x2="606" y2="180" stroke="#dce6ec" stroke-width="5"/>
+    <line x1="578" y1="246" x2="606" y2="246" stroke="#dce6ec" stroke-width="5"/>
+    <line x1="578" y1="312" x2="606" y2="312" stroke="#dce6ec" stroke-width="5"/>
+    <line x1="578" y1="378" x2="606" y2="378" stroke="#dce6ec" stroke-width="5"/>
+  </g>
+  <g transform="translate(910 330)">
+    <ellipse cx="210" cy="54" rx="210" ry="54" fill="#eef3f5"/>
+    <rect x="0" y="54" width="420" height="250" fill="url(#tank)"/>
+    <ellipse cx="210" cy="304" rx="210" ry="54" fill="#6b7e89"/>
+    <line x1="34" y1="134" x2="386" y2="134" stroke="#728590" stroke-width="6" opacity=".62"/>
+    <line x1="34" y1="218" x2="386" y2="218" stroke="#728590" stroke-width="6" opacity=".62"/>
+    <rect x="180" y="16" width="60" height="28" rx="6" fill="#53636d"/>
+  </g>
+  <g fill="#f4b63f">
+    <rect x="76" y="705" width="236" height="18" rx="9"/>
+    <rect x="1240" y="720" width="250" height="18" rx="9"/>
+  </g>
+  <g fill="#202a31" opacity=".36">
+    <rect x="350" y="742" width="900" height="18" rx="9"/>
+    <rect x="424" y="790" width="572" height="16" rx="8"/>
+  </g>
+</svg>
