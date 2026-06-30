@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LandingContentController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\NewsPostController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
@@ -32,6 +33,7 @@ Route::prefix('admin')
         Route::get('/landing-content', [LandingContentController::class, 'edit'])->name('landing-content.edit');
         Route::put('/landing-content', [LandingContentController::class, 'update'])->name('landing-content.update');
         Route::resource('products', ProductController::class);
+        Route::resource('news-posts', NewsPostController::class);
         Route::resource('messages', MessageController::class)->only(['index', 'show', 'destroy']);
         Route::patch('messages/{message}/mark-as-replied', [MessageController::class, 'markAsReplied'])->name('messages.mark-as-replied');
     });

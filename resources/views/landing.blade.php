@@ -34,6 +34,43 @@
             </div>
         </section>
 
+        <section id="business" class="section-space">
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-6">
+                        <span class="eyebrow text-dark">Profil Perusahaan</span>
+                        <h2 class="section-title mt-2">{{ $content['profile_title'] }}</h2>
+                        <p class="section-copy">{{ $content['profile_body'] }}</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="business-panel">
+                            <span class="eyebrow text-dark">Bisnis</span>
+                            <h3 class="h4 mt-2">{{ $content['business_title'] }}</h3>
+                            <p class="text-muted">{{ $content['business_body'] }}</p>
+                            <div class="business-grid">
+                                <div>
+                                    <strong>Fabrikasi</strong>
+                                    <span>Desain dan pembuatan tangki sesuai kebutuhan kapasitas.</span>
+                                </div>
+                                <div>
+                                    <strong>Sewa Tangki</strong>
+                                    <span>Unit tangki untuk kebutuhan proyek dan operasional sementara.</span>
+                                </div>
+                                <div>
+                                    <strong>Inspeksi</strong>
+                                    <span>Pemeriksaan kondisi tangki, coating, fitting, dan area sambungan.</span>
+                                </div>
+                                <div>
+                                    <strong>Perawatan</strong>
+                                    <span>Perbaikan, pengecatan, penggantian komponen, dan pekerjaan lapangan.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="products" class="section-space">
             <div class="container">
                 <div class="section-heading text-center">
@@ -60,6 +97,38 @@
                             <div class="empty-state">
                                 Belum ada produk yang ditampilkan.
                             </div>
+                        </div>
+                    @endforelse
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="section-space bg-soft">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="eyebrow text-dark">Informasi</span>
+                    <h2 class="section-title">{{ $content['news_title'] }}</h2>
+                    <p>{{ $content['news_subtitle'] }}</p>
+                </div>
+
+                <div class="row g-4 mt-2">
+                    @forelse ($newsPosts as $post)
+                        <div class="col-md-6 col-lg-4">
+                            <article class="news-card h-100">
+                                <img src="{{ $post->image_url ?: asset('images/oil-tank-hero.svg') }}" alt="{{ $post->title }}" class="news-image">
+                                <div class="p-4">
+                                    <div class="news-meta">
+                                        <span>{{ $post->category }}</span>
+                                        <span>{{ $post->published_at?->format('d M Y') }}</span>
+                                    </div>
+                                    <h3 class="h5 mt-3">{{ $post->title }}</h3>
+                                    <p class="text-muted mb-0">{{ $post->excerpt }}</p>
+                                </div>
+                            </article>
+                        </div>
+                    @empty
+                        <div class="col-12">
+                            <div class="empty-state">Belum ada berita yang ditampilkan.</div>
                         </div>
                     @endforelse
                 </div>

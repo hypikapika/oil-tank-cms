@@ -61,11 +61,3 @@ Thumbs.db
 .zed
 /.phpactor.json
 /.phpunit.result.cache
-
-# Temporary Laravel base downloaded during repository completion.
-/__laravel11_base/
-
-# Legacy static export from the previous non-Laravel version.
-/assets/
-/index.html
-/README.txt

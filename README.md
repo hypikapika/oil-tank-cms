@@ -1,15 +1,22 @@
 # OilTankPro
 
-Kode ini berisi project Laravel 11 untuk halaman perusahaan tangki minyak dan panel admin sederhana. Admin dapat mengelola produk, isi halaman depan, dan pesan dari form kontak.
+OilTankPro adalah aplikasi Laravel 11 untuk company profile bisnis tangki minyak. Aplikasi ini menyediakan landing page profesional, form kontak, autentikasi pengguna, dan panel CMS untuk mengelola konten utama perusahaan.
 
-## Catatan Penting
+## Fitur
 
-- Jangan commit `.env`.
-- Isi `ADMIN_EMAIL` dan `ADMIN_PASSWORD` di `.env` lokal sebelum menjalankan seeder.
-- Seeder admin sengaja tidak membuat akun jika email atau password admin belum diisi.
-- Jalankan `php artisan storage:link` agar foto produk bisa tampil.
+- Landing page dengan hero, profil perusahaan, ruang lingkup bisnis, produk, berita, dan kontak.
+- CMS admin untuk mengelola teks halaman, produk tangki, berita, dan pesan masuk.
+- Upload gambar produk dan berita melalui storage publik Laravel.
+- Login dan register dengan role `admin` dan `user`.
+- Seeder data awal untuk produk, konten halaman, dan berita.
 
-## Menjalankan
+## Persyaratan
+
+- PHP 8.2 atau lebih baru.
+- Composer.
+- Database MySQL, MariaDB, PostgreSQL, atau SQLite.
+
+## Instalasi
 
 ```bash
 composer install
@@ -20,12 +27,32 @@ php artisan storage:link
 php artisan serve
 ```
 
-Jika memakai MySQL, sesuaikan nama database, username, dan password di `.env` sebelum menjalankan migrasi.
+Sebelum menjalankan migrasi, sesuaikan koneksi database di `.env`. Untuk membuat akun admin melalui seeder, isi variabel berikut di `.env` lokal:
 
-## Isi Project
+```env
+ADMIN_NAME="Oil Tank Admin"
+ADMIN_EMAIL=admin@oiltankpro.test
+ADMIN_PASSWORD=
+```
 
-- Landing page perusahaan tangki minyak.
-- Masuk dan daftar akun dengan role `admin` dan `user`.
-- Kelola produk tangki, kapasitas, spesifikasi, dan gambar.
-- Kelola teks halaman depan.
-- Simpan pesan dari form kontak.
+Gunakan password kuat dan unik. File `.env` tidak disimpan di repository.
+
+## Pengujian
+
+```bash
+php artisan test
+```
+
+## Struktur Utama
+
+- `app/Http/Controllers/Admin` untuk dashboard dan CMS.
+- `app/Http/Controllers/Auth` untuk login, register, dan logout.
+- `app/Models` untuk model produk, berita, pesan, konten halaman, dan user.
+- `database/migrations` untuk struktur tabel aplikasi.
+- `database/seeders` untuk data awal.
+- `resources/views` untuk Blade view publik, auth, dan admin.
+- `routes/web.php` untuk route publik dan route admin.
+
+## Keamanan Repository
+
+File lokal seperti `.env`, `vendor`, cache, log, database dump, dan private key sudah dikecualikan dari repository melalui `.gitignore`.

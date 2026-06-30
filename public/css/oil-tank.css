@@ -81,6 +81,7 @@ a {
 }
 
 .product-card,
+.news-card,
 .auth-card,
 .admin-panel,
 .stat-card,
@@ -91,11 +92,13 @@ a {
     box-shadow: 0 16px 34px rgba(31, 42, 51, .08);
 }
 
-.product-card {
+.product-card,
+.news-card {
     overflow: hidden;
 }
 
-.product-image {
+.product-image,
+.news-image {
     width: 100%;
     aspect-ratio: 16 / 10;
     object-fit: cover;
@@ -128,6 +131,47 @@ a {
     color: #66737e;
     border: 1px dashed var(--line);
     border-radius: 8px;
+}
+
+.business-panel {
+    padding: 28px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.business-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 22px;
+}
+
+.business-grid div {
+    min-height: 112px;
+    padding: 18px;
+    background: var(--soft);
+    border-radius: 8px;
+}
+
+.business-grid strong,
+.business-grid span {
+    display: block;
+}
+
+.business-grid span {
+    margin-top: 8px;
+    color: #596975;
+    font-size: .94rem;
+}
+
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--green);
+    font-size: .82rem;
+    font-weight: 700;
 }
 
 .site-footer {
@@ -260,7 +304,12 @@ a {
     .auth-card,
     .contact-panel,
     .admin-panel,
-    .stat-card {
+    .stat-card,
+    .business-panel {
         padding: 20px;
+    }
+
+    .business-grid {
+        grid-template-columns: 1fr;
     }
 }

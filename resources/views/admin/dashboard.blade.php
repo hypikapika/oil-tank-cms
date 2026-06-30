@@ -19,6 +19,12 @@
         </div>
         <div class="col-md-4">
             <div class="stat-card">
+                <span>Berita Tayang</span>
+                <strong>{{ $publishedNewsCount }}</strong>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="stat-card">
                 <span>Pesan Baru</span>
                 <strong>{{ $newMessageCount }}</strong>
             </div>
@@ -53,6 +59,42 @@
                         </tr>
                     @empty
                         <tr><td colspan="5" class="text-center text-muted">Belum ada pesan.</td></tr>
+                    @endforelse
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="admin-panel mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 mb-0">Berita Terbaru</h2>
+            <a href="{{ route('admin.news-posts.index') }}" class="btn btn-sm btn-outline-dark">Kelola Berita</a>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th>Judul</th>
+                        <th>Kategori</th>
+                        <th>Status</th>
+                        <th>Tanggal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @forelse ($latestNewsPosts as $post)
+                        <tr>
+                            <td>{{ $post->title }}</td>
+                            <td>{{ $post->category }}</td>
+                            <td>
+                                <span class="badge {{ $post->is_published ? 'text-bg-success' : 'text-bg-secondary' }}">
+                                    {{ $post->is_published ? 'Tayang' : 'Draft' }}
+                                </span>
+                            </td>
+                            <td>{{ $post->published_at?->format('d M Y H:i') ?: '-' }}</td>
+                        </tr>
+                    @empty
+                        <tr><td colspan="4" class="text-center text-muted">Belum ada berita.</td></tr>
                     @endforelse
                 </tbody>
             </table>

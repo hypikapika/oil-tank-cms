@@ -20,15 +20,39 @@
                         <textarea name="hero_subtitle" id="hero_subtitle" rows="3" class="form-control" required>{{ old('hero_subtitle', $content['hero_subtitle']) }}</textarea>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="about_title">Judul About</label>
+                        <label class="form-label" for="about_title">Judul Ringkas Perusahaan</label>
                         <input type="text" name="about_title" id="about_title" class="form-control" value="{{ old('about_title', $content['about_title']) }}" required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="about_body">Isi About</label>
+                        <label class="form-label" for="about_body">Isi Ringkas Perusahaan</label>
                         <textarea name="about_body" id="about_body" rows="6" class="form-control" required>{{ old('about_body', $content['about_body']) }}</textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="profile_title">Judul Profil Perusahaan</label>
+                        <input type="text" name="profile_title" id="profile_title" class="form-control" value="{{ old('profile_title', $content['profile_title']) }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="profile_body">Isi Profil Perusahaan</label>
+                        <textarea name="profile_body" id="profile_body" rows="6" class="form-control" required>{{ old('profile_body', $content['profile_body']) }}</textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="business_title">Judul Informasi Bisnis</label>
+                        <input type="text" name="business_title" id="business_title" class="form-control" value="{{ old('business_title', $content['business_title']) }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="business_body">Isi Informasi Bisnis</label>
+                        <textarea name="business_body" id="business_body" rows="6" class="form-control" required>{{ old('business_body', $content['business_body']) }}</textarea>
                     </div>
                 </div>
                 <div class="col-lg-5">
+                    <div class="mb-3">
+                        <label class="form-label" for="news_title">Judul Bagian Berita</label>
+                        <input type="text" name="news_title" id="news_title" class="form-control" value="{{ old('news_title', $content['news_title']) }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="news_subtitle">Deskripsi Bagian Berita</label>
+                        <textarea name="news_subtitle" id="news_subtitle" rows="3" class="form-control" required>{{ old('news_subtitle', $content['news_subtitle']) }}</textarea>
+                    </div>
                     <div class="mb-3">
                         <label class="form-label" for="contact_email">Email Kontak</label>
                         <input type="email" name="contact_email" id="contact_email" class="form-control" value="{{ old('contact_email', $content['contact_email']) }}" required>

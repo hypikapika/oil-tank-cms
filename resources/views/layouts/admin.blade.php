@@ -16,6 +16,7 @@
                 <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a>
                 <a class="nav-link" href="{{ route('admin.landing-content.edit') }}">Halaman Depan</a>
                 <a class="nav-link" href="{{ route('admin.products.index') }}">Produk Tangki</a>
+                <a class="nav-link" href="{{ route('admin.news-posts.index') }}">Berita</a>
                 <a class="nav-link" href="{{ route('admin.messages.index') }}">Pesan Masuk</a>
                 <a class="nav-link" href="{{ route('landing') }}">Lihat Website</a>
             </nav>

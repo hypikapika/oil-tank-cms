@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ContactMessage;
 use App\Models\LandingContent;
+use App\Models\NewsPost;
 use App\Models\Product;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -16,6 +17,7 @@ class LandingPageController extends Controller
         return view('landing', [
             'content' => LandingContent::forLanding(),
             'products' => Product::active()->latest()->get(),
+            'newsPosts' => NewsPost::published()->latest('published_at')->limit(3)->get(),
         ]);
     }
 
@@ -32,6 +34,6 @@ class LandingPageController extends Controller
 
         ContactMessage::create($validated);
 
-        return back()->with('success', 'Pesan Anda berhasil dikirim. Tim kami akan menghubungi Anda.');
+        return redirect('/#contact')->with('success', 'Pesan Anda berhasil dikirim. Tim kami akan menghubungi Anda.');
     }
 }

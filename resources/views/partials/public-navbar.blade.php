@@ -7,7 +7,9 @@
         <div class="collapse navbar-collapse" id="publicNav">
             <ul class="navbar-nav ms-auto align-items-lg-center">
                 <li class="nav-item"><a class="nav-link" href="{{ route('landing') }}#about">Tentang</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('landing') }}#business">Bisnis</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('landing') }}#products">Produk</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('landing') }}#news">Berita</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('landing') }}#contact">Kontak</a></li>
                 @auth
                     @if (auth()->user()->isAdmin())
