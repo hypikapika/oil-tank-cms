@@ -1,6 +1,6 @@
-# Catatan Integrasi Laravel
+# Catatan Project
 
-File di repository ini disiapkan untuk ditempatkan di root project Laravel 11. Isinya mencakup auth sederhana, role admin/user, halaman depan perusahaan tangki minyak, pengelolaan produk, pengelolaan teks halaman, dan pesan dari form kontak.
+Repository ini sudah berisi struktur project Laravel 11. Isinya mencakup auth sederhana, role admin/user, halaman depan perusahaan tangki minyak, pengelolaan produk, pengelolaan teks halaman, dan pesan dari form kontak.
 
 ## File Utama
 
@@ -20,16 +20,28 @@ File di repository ini disiapkan untuk ditempatkan di root project Laravel 11. I
 
 ## Menjalankan
 
-1. Pastikan file ini berada di root project Laravel 11.
-2. Atur koneksi database di `.env`.
-3. Jalankan migrasi, seeder, dan storage link:
+1. Install dependency PHP:
+
+```bash
+composer install
+```
+
+2. Buat `.env` dari contoh yang tersedia:
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+3. Atur koneksi database di `.env`.
+4. Jalankan migrasi, seeder, dan storage link:
 
 ```bash
 php artisan migrate --seed
 php artisan storage:link
 ```
 
-4. Jalankan server lokal:
+5. Jalankan server lokal:
 
 ```bash
 php artisan serve

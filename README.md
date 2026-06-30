@@ -1,6 +1,6 @@
 # OilTankPro
 
-Kode ini berisi halaman perusahaan tangki minyak dan panel admin sederhana untuk mengelola produk, isi landing page, dan pesan masuk.
+Kode ini berisi project Laravel 11 untuk halaman perusahaan tangki minyak dan panel admin sederhana. Admin dapat mengelola produk, isi halaman depan, dan pesan dari form kontak.
 
 ## Catatan Penting
 
@@ -12,12 +12,15 @@ Kode ini berisi halaman perusahaan tangki minyak dan panel admin sederhana untuk
 ## Menjalankan
 
 ```bash
+composer install
 cp .env.example .env
 php artisan key:generate
 php artisan migrate --seed
 php artisan storage:link
 php artisan serve
 ```
+
+Jika memakai MySQL, sesuaikan nama database, username, dan password di `.env` sebelum menjalankan migrasi.
 
 ## Isi Project
 
